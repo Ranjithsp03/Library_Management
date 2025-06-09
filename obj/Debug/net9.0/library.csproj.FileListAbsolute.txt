@@ -12,3 +12,4 @@ C:\Users\u499160\Documents\wnsdotnet\library\obj\Debug\net9.0\refint\library.dll
 C:\Users\u499160\Documents\wnsdotnet\library\obj\Debug\net9.0\library.pdb
 C:\Users\u499160\Documents\wnsdotnet\library\obj\Debug\net9.0\library.genruntimeconfig.cache
 C:\Users\u499160\Documents\wnsdotnet\library\obj\Debug\net9.0\ref\library.dll
+C:\Users\u499160\Documents\wnsdotnet\library\obj\Debug\net9.0\library.sourcelink.json
