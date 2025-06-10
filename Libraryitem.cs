@@ -13,7 +13,7 @@ public class Libraryitem
     public void Showinfo()
     {
         Console.WriteLine($"The id is:\t{Id}");
-        Console.WriteLine($"The item is:\t {Title}");
+        Console.WriteLine($"The Title is:\t {Title}");
     }
 
 }

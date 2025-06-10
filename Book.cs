@@ -10,6 +10,10 @@ public class Book:Libraryitem
         Id = id;
         Title = title;
         Author = author;
+        if (isbn.Length != 16)
+        {
+            throw new InvalidException("ISBN must be 16 character length");
+        }
         Isbn = isbn;
     }
     public Book() { }
