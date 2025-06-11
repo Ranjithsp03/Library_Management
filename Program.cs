@@ -7,18 +7,18 @@ try
     Console.WriteLine("Welcome to Library Management");
     Console.ResetColor();
     Book b1 = new Book("1", "Ps1", "Manirathanam", "1234567890987654");
-    Book b2 = new Book("2", "Gameofthrones", "Mother of dragons", "4561234567890987");
-    Magazine b3 = new Magazine("3", "Co", "4567");
+    // Book b2 = new Book("2", "Gameofthrones", "Mother of dragons", "4561234567890987");
+    // Magazine b3 = new Magazine("3", "Co", "4567");
     // b1.displaydetails();
     // b2.displaydetails();
     // b1.Showinfo();
-    library.AddItem(b1);
-    library.AddItem(b2);
-    library.RemoveItem(b2);
-    library.AddItem(b3);
-    library.ListItems();
-    library.ListBook();
-    library.ListMagazine();
+    library.AddBook(b1);
+    // library.AddBook(b2);
+    library.RemoveBook(b1);
+    // library.AddItem(b3);
+    // library.ListItems();
+    // library.ListBook();
+    // library.ListMagazine();
     // b2.Showinfo();
 }
 

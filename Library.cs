@@ -9,19 +9,23 @@ public class Library
     private List<Book> BookItems;
     private List<Magazine> Magazines;
     private HashSet<string> booktitle;
+    NotificationService notificationService;
     public Library()
     {
         libraryItems = new List<Libraryitem>();
         BookItems = new List<Book>();
         Magazines = new List<Magazine>();
+        notificationService = new NotificationService();
+        notificationService.Onnotify += notificationService.SendemailNotification;
+
         booktitle = new HashSet<string>();
     }
-    public void AddItem(Libraryitem item)
-    {
-        libraryItems.Add(item);
-    }
+    // public void AddItem(Libraryitem item)
+    // {
+    //     libraryItems.Add(item);
+    // }
 
-    public void AddItem(Book item)
+    public void AddBook(Book item)
     {
         if (booktitle.Contains(item.Title))
         {
@@ -29,11 +33,12 @@ public class Library
         }
         BookItems.Add(item);
         booktitle.Add(item.Title);
+        notificationService.Notify($"A new Book '{item.Title}' has been added");
     }
-    public void AddItem(Magazine item)
-    {
-        Magazines.Add(item);
-    }
+    // public void AddItem(Magazine item)
+    // {
+    //     Magazines.Add(item);
+    // }
 
 
     public void RemoveItem(Libraryitem item)
@@ -43,12 +48,17 @@ public class Library
         libraryItems.Remove(item);
 
     }
-    public void RemoveItem(Book item)
+    public void RemoveBook(Book item)
     {
-        Console.WriteLine("The removed item is:");
-        item.Showinfo();
+        // Console.WriteLine("The removed item is:");
+        // item.Showinfo();
         BookItems.Remove(item);
+        notificationService.Notify($"A  Book  has been Taken by user:'{item.Title}'");    
 
+    }
+    public void IssuseBook(string item,string user)
+    {
+           
     }
     public void RemoveItem(Magazine item)
     {
